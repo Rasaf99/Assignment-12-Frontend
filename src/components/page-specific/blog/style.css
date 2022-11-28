@@ -1,0 +1,39 @@
+.question_answer_component {
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width:100%;
+
+    display:grid;
+    justify-items: center;
+
+    text-align:center;
+}
+
+.question_answer_wrapper {
+
+    width:18rem;
+}
+
+
+  @media(min-width:640px) {
+    .question_answer_wrapper{
+       width: 24rem;
+    }
+
+  }
+  
+  
+  @media(min-width:960px) {
+    .question_answer_wrapper{
+       
+        width: 30rem;
+
+    }
+  }
+  
+  @media(min-width:1280px) {
+    .question_answer_wrapper{
+      width: 36rem;
+    }
+  }
