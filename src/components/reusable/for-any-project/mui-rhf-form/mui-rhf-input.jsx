@@ -12,8 +12,6 @@ export default function MUI_RHF_INPUT({ control, label, propertyName, inputField
 
 
 
-  /* 🔖 On <FormControl/> & <FormHelperText/> component, 'variant' prop needs to pass. There can be three values for this prop. In the following 'selectedVariant' function, writing the conditions for selecting the right value for the 'variant' prop. Later, we will call this function as the value of the 'variant' prop in <FormControl/> & <FormHelperText/> component.*/
-
 
   const selectedVariant = () => {
 
@@ -53,8 +51,7 @@ export default function MUI_RHF_INPUT({ control, label, propertyName, inputField
           <InputLabel htmlFor={propertyName}>{label}</InputLabel>
 
 
-          {/* 🔖 There are 3 variants to choose from. And for those 3 variants, there is 3 components. In the following code, I am conditionally picking the right component based on the selected variant. Each component has same props and those props has same value but I didn't get a way to write those props once and use in all 3 components, couldn't even do it with spread operator. Each prop has its task.  For example, you need the 'label' prop and give it the same value of the <InputLabel/> component, otherwise the UI will have bug while focusing on a input field. You can read more about other props in the MUI website. */}
-
+     
           {
             (() => {
 
@@ -116,8 +113,7 @@ export default function MUI_RHF_INPUT({ control, label, propertyName, inputField
 
           {errorToast ?
 
-            /*🔖 Even when we want to show toast, I will need to use FormHelperText component. Otherwise, UI will show weird extra error message. Maybe, it's a MUI bug. To hide that bug, we need to use FormHelperText component with 'display:none' property.  */
-
+      
 
             <FormHelperText sx={{ display: 'none' }} id={propertyName}>
 
